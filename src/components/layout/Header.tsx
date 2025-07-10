@@ -1,4 +1,5 @@
 import { ChevronDown } from "lucide-react";
+import { Button } from "../Button";
 
 export function Header() {
   return (
@@ -14,8 +15,8 @@ export function Header() {
         <li className="flex gap-1 items-center hover:cursor-pointer hover:text-blue-400">Blog <ChevronDown className="h-4 hidden md:block" /></li>
         <li className="hover:cursor-pointer hover:text-blue-400">Contato</li>
       </ul>
-
-      <button className="bg-blue-500 px-3 py-1.5 rounded-lg lg:px-8 lg:py-2 hover:cursor-pointer hover:bg-blue-600">Saber mais</button>
+      
+      <Button name="Saber Mais" />
     </div>
   )
 }

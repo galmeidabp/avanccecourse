@@ -1,6 +1,6 @@
-import { CourseCard } from "./components/CourseCard";
+import { CourseCard } from "../../components/home/components/CourseCard";
 
-export default function Courses() {
+export function Courses() {
   return (
     <div className="bg-gray-800 my-20 py-20">
       <div className="max-w-sm m-auto md:max-w-xl lg:max-w-5xl">

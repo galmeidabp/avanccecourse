@@ -1,6 +1,7 @@
-import { ChevronRight, Droplet, Heart, LockKeyholeOpen, RotateCw, Scan } from "lucide-react";
+import { Droplet, Heart, LockKeyholeOpen, RotateCw, Scan } from "lucide-react";
 import Image from "next/image";
-import { Categories } from "./components/Categories";
+import { Categories } from "../../components/home/components/Categories";
+import { Button } from "../Button";
 
 export function Hero() {
   return (
@@ -11,13 +12,13 @@ export function Hero() {
           <h1 className="text-5xl font-bold md:text-5xl">Aprender é a chave para o seu sucesso. Obtenha cursos personalizados.</h1>
           <p className="text-gray-400 md:text-sm">Incorpore recursos financeiros poderosos ao seu produto e lance <br /> em algumas semanas.</p>
           <div className="flex gap-5">
-            <button className="flex gap-3 bg-blue-500 px-3 py-1.5 rounded-lg lg:px-8 lg:py-2 hover:cursor-pointer hover:bg-blue-600">Começar <ChevronRight className="w-4" /></button>
+            <Button name="Começar" />
 
             <button className="flex gap-3 bg-gray-100 text-gray-400 px-3 py-1.5 rounded-lg lg:px-8 lg:py-2 hover:cursor-pointer">Como funciona?</button>
           </div>
         </div>
 
-        <Image src="/hero-image.png" alt="." height={300} width={400} className="hidden lg:block" />
+        <Image src="/hero-image.png" alt="." height={300} width={400} priority className="hidden lg:block" />
 
       </div >
 
