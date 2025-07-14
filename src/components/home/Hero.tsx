@@ -10,11 +10,11 @@ export function Hero() {
 
         <div className="max-w-2xl flex flex-col gap-8">
           <h1 className="text-5xl font-bold md:text-5xl">Aprender é a chave para o seu sucesso. Obtenha cursos personalizados.</h1>
-          <p className="text-gray-400 md:text-sm">Incorpore recursos financeiros poderosos ao seu produto e lance <br /> em algumas semanas.</p>
+          <p className="text-gray-400 md:text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem nihil odit totam, numquam accusamus incidunt eius corporis veniam expedita </p>
           <div className="flex gap-5">
             <Button name="Começar" />
 
-            <button className="flex gap-3 bg-gray-100 text-gray-400 px-3 py-1.5 rounded-lg lg:px-8 lg:py-2 hover:cursor-pointer">Como funciona?</button>
+            <button className="flex gap-3 bg-gray-100 text-gray-400 px-3 py-1.5 rounded lg:px-8 lg:py-2 hover:cursor-pointer">Como funciona?</button>
           </div>
         </div>
 

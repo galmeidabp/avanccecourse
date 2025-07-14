@@ -1,5 +1,5 @@
-import { ChevronDown } from "lucide-react";
 import { Button } from "../Button";
+import Link from "next/link";
 
 export function Header() {
   return (
@@ -10,10 +10,10 @@ export function Header() {
       </div>
 
       <ul className="flex gap-3 text-gray-400 md:gap-8 lg:gap-10">
-        <li className="hover:cursor-pointer hover:text-blue-400">Home</li>
-        <li className="flex gap-1 items-center hover:cursor-pointer hover:text-blue-400">Cursos <ChevronDown className="h-4 hidden md:block" /></li>
-        <li className="flex gap-1 items-center hover:cursor-pointer hover:text-blue-400">Blog <ChevronDown className="h-4 hidden md:block" /></li>
-        <li className="hover:cursor-pointer hover:text-blue-400">Contato</li>
+        <li className="hover:cursor-pointer hover:text-blue-400"><Link href="/">Home</Link></li>
+        <li className="flex gap-1 items-center hover:cursor-pointer hover:text-blue-400"><Link href="/course-listing">Cursos</Link></li>
+        <li className="flex gap-1 items-center hover:cursor-pointer hover:text-blue-400"><Link href="/blog">Blog</Link></li>
+        <li className="hover:cursor-pointer hover:text-blue-400"><Link href="/contact">Contato</Link></li>
       </ul>
       
       <Button name="Saber Mais" />

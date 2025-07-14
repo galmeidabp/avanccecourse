@@ -1,9 +1,25 @@
-import { BlogCard } from "@/components/blog/Blog-card"
 import { Button } from "@/components/Button"
 import { ChevronRight, Facebook, Linkedin, Twitter } from "lucide-react"
 import Image from "next/image"
+import { remark } from "remark";
+import html from "remark-html";
+import { getPostBySlug } from "../../../../lib/posts";
+import { notFound } from "next/navigation";
 
-export default function BlogPage() {
+type BlogPageProps = {
+  params: {
+    slug: string
+  }
+}
+
+export default async function BlogPage({params}: BlogPageProps) {
+  const post = getPostBySlug(params.slug)
+
+  if(!post) return notFound()
+
+  const processedContent = await remark().use(html).process(post.content)
+  const contentHtml = processedContent.toString()
+
   return (
     <div>
       <div className="flex flex-col mt-15 max-w-sm m-auto md:max-w-xl lg:max-w-5xl">
@@ -11,10 +27,10 @@ export default function BlogPage() {
           <div className="flex flex-col gap-3 mb-3">
             <div className="flex flex-row gap-8">
               <span>Trends</span>
-              <span>18 horas atrás | 14 Comentários</span>
+              <span>{post.date} | 14 Comentários</span>
             </div>
 
-            <h1 className="text-3xl font-bold">Título do post</h1>
+            <h1 className="text-3xl font-bold">{post.title}</h1>
           </div>
 
 
@@ -34,8 +50,7 @@ export default function BlogPage() {
         <div className="grid grid-cols-[3fr_1fr] gap-20 mt-10 items-start">
           <div className="flex flex-col gap-6">
             <h2 className="font-semibold text-2xl">Pipipipópopopo & etcetera</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, non facere beatae veniam sequi sed aliquid maxime suscipit cum. Doloremque officiis facere iusto sunt accusamus magni voluptates nam nulla. Dolorem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil fugiat porro voluptate nam voluptatem repellendus placeat expedita obcaecati aspernatur excepturi praesentium laborum nostrum quibusdam tempore, iure illum. Est, velit accusantium? Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae unde accusamus error dolorem minus ipsam, harum laboriosam doloremque cum tenetur illo labore expedita at numquam incidunt! Voluptas placeat temporibus optio. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto facere tempora aliquam tempore et! Sed, corrupti adipisci! Explicabo sapiente obcaecati porro, nihil debitis voluptatum quis, aut vero vel recusandae sint!</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, non facere beatae veniam sequi sed aliquid maxime suscipit cum. Doloremque officiis facere iusto sunt accusamus magni voluptates nam nulla. Dolorem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil fugiat porro voluptate nam voluptatem repellendus placeat expedita obcaecati aspernatur excepturi praesentium laborum nostrum quibusdam tempore, iure illum. Est, velit accusantium? Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae unde accusamus error dolorem minus ipsam, harum laboriosam doloremque cum tenetur illo labore expedita at numquam incidunt! Voluptas placeat temporibus optio. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto facere tempora aliquam tempore et! Sed, corrupti adipisci! Explicabo sapiente obcaecati porro, nihil debitis voluptatum quis, aut vero vel recusandae sint!</p>
+            <div dangerouslySetInnerHTML={{__html: contentHtml}} className="prose prose-invert"></div>
 
             <div className="flex gap-5 items-center border-t-1 border-gray-800 py-5 border-b-1 mt-10">
               <h3>Tags</h3>
@@ -72,11 +87,11 @@ export default function BlogPage() {
           </div>
 
           <div className="grid grid-cols-2 gap-5">
-            <BlogCard />
-            <BlogCard />
+            <p>é pra vir o blog card aq tmb dps colcoar</p>
           </div>
         </div>
       </div>
     </div>
   )
 }
+

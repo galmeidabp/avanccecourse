@@ -15,8 +15,8 @@ export function Footer() {
           <form className="flex flex-col gap-3 items-center md:flex-row">
             <p className="font-semibold">Assine nossa newsletter</p>
             <div className="flex items-center gap-3">
-              <input type="text" placeholder="Digite seu e-mail" className="bg-blue-800 p-2 rounded-lg outline-none focus:bg-blue-900" />
-              <button type="submit" className="p-2 bg-blue-800 rounded-lg cursor-pointer hover:bg-blue-900"><Send /></button>
+              <input type="text" placeholder="Digite seu e-mail" className="bg-blue-800 p-2 rounded outline-none focus:bg-blue-900" />
+              <button type="submit" className="p-2 bg-blue-800 rounded cursor-pointer hover:bg-blue-900"><Send /></button>
             </div>
           </form>
         </div>
@@ -75,11 +75,11 @@ export function Footer() {
             </div>
             <div className="flex items-center gap-2 mb-5 text-gray-400">
               <Phone />
-              <p>Endereço, Rua Tal Tal Tal, 876 - Brasil</p>
+              <p>00 0000 0000</p>
             </div>
             <div className="flex items-center gap-2 mb-8 text-gray-400">
               <Mail />
-              <p>Endereço, Rua Tal Tal Tal, 876 - Brasil</p>
+              <p>email@email.com</p>
             </div>
           </div>
 

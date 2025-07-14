@@ -27,7 +27,7 @@ export function CallToAction() {
         <div className="mx-15 my-10 lg:mr-0">
           <h2 className="text-3xl font-bold mb-5 text-gray-900">Comece a aprender e conquiste o emprego dos seus sonhos</h2>
           <p className="mb-5 text-gray-400 text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia ipsum explicabo atque nam, officiis facilis itaque bla. Mollitia ipsum explicabo atque nam.</p>
-          <Button name="Comece a aprender >" />
+          <Button name="Comece a aprender" />
         </div>
         <Image src="/cta-starttolearn.png" alt="." width={400} height={300} className="h-40 w-70 lg:h-70 lg:w-140" />
       </div>
