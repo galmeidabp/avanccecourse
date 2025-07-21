@@ -1,13 +1,13 @@
 import { CallToAction } from "@/components/home/CallToAction";
 import { Hero } from "@/components/home/Hero";
-import { Courses } from "@/components/home/Courses";
+import CourseListing from "./course-listing/page";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="mb-35">
       <Hero />
 
-      <Courses />
+      <CourseListing />
 
       <CallToAction />
     </div>

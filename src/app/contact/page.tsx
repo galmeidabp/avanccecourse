@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Contact() {
   return (
-    <div className="flex flex-col mt-15 max-w-sm m-auto md:max-w-xl lg:max-w-5xl">
+    <div className="flex flex-col mt-15 mb-35 max-w-sm m-auto md:max-w-xl lg:max-w-5xl">
       <div className="flex flex-row justify-between items-center mb-15">
         <h1 className="text-3xl font-bold">Nos contate</h1>
         <Breadcrumb>
@@ -46,14 +46,14 @@ export default function Contact() {
 
       <Image src="/map.png" alt="Mapa" height={900} width={900} className="mt-20 md:mt-30 m-auto" />
 
-      <div className="mt-30 flex gap-20 items-center">
+      <div className="flex flex-col mt-30 gap-20 items-center lg:flex-row">
         <div>
           <h2 className="text-3xl font-semibold mb-8">Participe de uma consultoria online</h2>
 
           <ContactForm />
         </div>
 
-        <Image src="/contact-img.png" alt="Imagem de contato" height={300} width={400} />
+        <Image src="/contact-img.png" alt="Imagem de contato" height={300} width={400} className="hidden lg:block" />
       </div>
 
     </div>

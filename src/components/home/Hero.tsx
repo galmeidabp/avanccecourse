@@ -14,19 +14,15 @@ export function Hero() {
           <div className="flex gap-5">
             <Button name="Começar" />
 
-            <button className="flex gap-3 bg-gray-100 text-gray-400 px-3 py-1.5 rounded lg:px-8 lg:py-2 hover:cursor-pointer">Como funciona?</button>
+            <button className="flex gap-3 bg-gray-100 text-blue-500 font-semibold px-3 py-1.5 rounded lg:px-8 lg:py-2 hover:cursor-pointer">Como funciona?</button>
           </div>
         </div>
-
         <Image src="/hero-image.png" alt="." height={300} width={400} priority className="hidden lg:block" />
 
       </div >
 
-
       < div className="max-w-sm m-auto md:max-w-xl lg:max-w-5xl" >
         <h2 className="text-3xl font-bold mt-25">Explore por <br /> categorias</h2>
-
-
         <div className="grid grid-cols-2 mt-5 md:grid-cols-3 lg:grid-cols-5 lg:gap-5 md:mt-10">
           <Categories title="Segurança avançada" Icon={LockKeyholeOpen} iconColor="text-amber-400" bgColor="bg-amber-200" />
           <Categories title={`Boa\nsemântica`} Icon={Scan} iconColor="text-red-400" bgColor="bg-red-200" />

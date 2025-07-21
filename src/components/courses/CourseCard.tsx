@@ -12,10 +12,11 @@ type CourseCardProps = {
 export function CourseCard({imageSrc, imageAlt, title, slug}: CourseCardProps) {
   return (
    <Link href={`/course-listing/${slug}`}>
-      <div className="bg-gray-700 rounded-xl">
+      <div className="bg-gray-700 rounded-xl border-1 border-gray-700 hover:border-blue-500 hover:shadow-md">
         <Image src={imageSrc} alt={imageAlt} width={370} height={370} />
 
         <div className="p-5">
+          
           <div className="flex items-center gap-3 mb-5">
             <p className="font-bold">4.7</p>
             <div className="flex items-center">
@@ -41,7 +42,9 @@ export function CourseCard({imageSrc, imageAlt, title, slug}: CourseCardProps) {
             </div>
             <span className="text-blue-500">R$ 114,99</span>
           </div>
+
         </div>
-      </div></Link>
+      </div>
+    </Link>
   )
 }

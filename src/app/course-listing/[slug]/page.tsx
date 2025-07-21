@@ -1,4 +1,7 @@
 import { coursesArray } from "@/app/data/courses"
+import { Button } from "@/components/Button"
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from "@/components/ui/breadcrumb"
+import { Facebook, Linkedin, Twitter } from "lucide-react"
 
 interface Params {
   params: {
@@ -6,21 +9,34 @@ interface Params {
   }
 }
 
-export default function CourseDetails({params}: Params) {
+export default function CourseDetails({ params }: Params) {
   const course = coursesArray.find((c) => c.slug === params.slug)
 
   return (
-    <div>
+    <div className="mb-35">
       <div className="bg-blue-900">
-        <div className="flex flex-col mt-15 max-w-sm m-auto md:max-w-xl lg:max-w-5xl py-10">
-          <p>Breadcrumb</p>
-          <h1 className="text-3xl font-bold">{course?.title}</h1>
+        <div className="flex gap-10 flex-col-reverse lg:flex-row lg:justify-between my-15 max-w-sm m-auto md:max-w-xl lg:max-w-5xl py-10">
+          <div>
+            <h1 className="text-3xl font-bold my-5 lg:mt-0">{course?.title}</h1>
+          </div>
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink className="text-blue-200" href="/">Home</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink className="text-white" href="/course-listing">Cursos</BreadcrumbLink>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+
         </div>
       </div>
 
       <div className="flex flex-col mt-15 max-w-sm m-auto md:max-w-xl lg:max-w-5xl">
-        
-        <div className="grid grid-cols-[3fr_1fr] gap-20 mt-10 items-start">
+
+        <div className="grid gap-10 items-start md:grid-cols-[3fr_1fr] lg:gap-20">
           <div className="flex flex-col gap-6">
             <h2 className="font-semibold text-2xl">{course?.title}</h2>
             <p>{course?.description}</p>
@@ -29,10 +45,14 @@ export default function CourseDetails({params}: Params) {
           <div className="bg-gray-800 p-5 rounded-lg shadow-xl/30">
             <h3 className="font-semibold text-lg mb-5">Compartilhar</h3>
             <div className="flex flex-col gap-3">
+              <button className="bg-indigo-600 text-white p-2 rounded flex items-center justify-center gap-2"><Facebook /> Facebook</button>
+              <button className="bg-blue-400 text-white p-2 rounded flex items-center justify-center gap-2"><Twitter /> Twitter</button>
+              <button className="bg-blue-600 text-white p-2 rounded flex items-center justify-center gap-2"><Linkedin /> LinkedIn</button>
             </div>
             <div className="flex flex-col gap-3 mt-10">
               <h3>Assine nossa newsletter</h3>
               <input type="email" placeholder="Email" className="border-1 border-gray-400 p-2 text-sm rounded" />
+              <Button name="Assinar" />
             </div>
           </div>
 

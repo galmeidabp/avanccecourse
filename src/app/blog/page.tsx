@@ -7,7 +7,7 @@ export default function Blog() {
   const posts = getAllPosts()
 
   return (
-    <div className="flex flex-col mt-15 max-w-sm m-auto md:max-w-xl lg:max-w-5xl">
+    <div className="flex flex-col mt-15 mb-35 max-w-sm m-auto md:max-w-xl lg:max-w-5xl">
       <div className="flex flex-row justify-between items-center mb-15">
         <h1 className="text-3xl font-bold">Blog</h1>
         <Breadcrumb>

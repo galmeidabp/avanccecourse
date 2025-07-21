@@ -1,101 +1,98 @@
 import { Facebook, Linkedin, Mail, MapPin, Phone, Send, Twitter } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+import { Logo } from "./Logo";
 
 export function Footer() {
   return (
-    <div className="bg-gray-800 p-10 mt-35">
+    <div className="bg-gray-800 p-10">
       <div className="max-w-sm m-auto md:max-w-xl lg:max-w-5xl">
         <div className="flex flex-col items-center justify-between border-b-1 border-gray-700 pb-8 mb-8 md:flex-row">
-          <div className="flex lg:gap-2">
-            <p className="font-black text-blue-500 text-3xl">L</p>
-            <h1 className="block text-3xl md:hidden lg:block">LOGO</h1>
-          </div>
-
+          <Logo />
 
           <form className="flex flex-col gap-3 items-center md:flex-row">
             <p className="font-semibold">Assine nossa newsletter</p>
             <div className="flex items-center gap-3">
-              <input type="text" placeholder="Digite seu e-mail" className="bg-blue-800 p-2 rounded outline-none focus:bg-blue-900" />
-              <button type="submit" className="p-2 bg-blue-800 rounded cursor-pointer hover:bg-blue-900"><Send /></button>
+              <input type="text" placeholder="Digite seu e-mail" className="bg-blue-500 p-2 rounded outline-none focus:bg-blue-600" />
+              <button type="submit" className="p-2 bg-blue-500 rounded cursor-pointer hover:bg-blue-600"><Send /></button>
             </div>
           </form>
         </div>
 
-        <div className="flex flex-col gap-10 pb-8 mb-4 md:flex-row lg:justify-center lg:gap-20">
-          <div className="flex justify-between md:gap-10 lg:gap-20">
+        <div className="flex flex-col justify-center border-b-1 border-gray-700 mb-10 lg:flex-row lg:gap-25">
+          <div className="flex gap-10 pb-8 mb-4 justify-center lg:gap-20">
             <div>
               <p className="mb-3 font-semibold">Explore</p>
               <ul className="text-gray-400 flex flex-col gap-2">
-                <li>Sobre</li>
-                <li>Preços</li>
-                <li>Blog</li>
-                <li>Vagas</li>
-                <li>Contato</li>
+                <li><Link className="hover:text-blue-500" href="#">Sobre</Link></li>
+                <li><Link className="hover:text-blue-500" href="#">Preços</Link></li>
+                <li><Link className="hover:text-blue-500" href="#">Blog</Link></li>
+                <li><Link className="hover:text-blue-500" href="#">Vagas</Link></li>
+                <li><Link className="hover:text-blue-500" href="#">Contato</Link></li>
               </ul>
             </div>
             <div>
-              <p className="mb-3 font-semibold">Explore</p>
+              <p className="mb-3 font-semibold">Recurso</p>
               <ul className="text-gray-400 flex flex-col gap-2">
-                <li>Pagamentos online</li>
-                <li>Projeções financeiras</li>
-                <li>Escrituração</li>
-                <li>Bancos</li>
+                <li><Link className="hover:text-blue-500" href="#">Sobre</Link></li>
+                <li><Link className="hover:text-blue-500" href="#">Preços</Link></li>
+                <li><Link className="hover:text-blue-500" href="#">Blog</Link></li>
+                <li><Link className="hover:text-blue-500" href="#">Vagas</Link></li>
+                <li><Link className="hover:text-blue-500" href="#">Contato</Link></li>
               </ul>
             </div>
-          </div>
-          <div className="flex justify-between md:gap-10 lg:gap-20">
             <div>
-              <p className="mb-3 font-semibold">Recursos</p>
+              <p className="mb-3 font-semibold">Benefícios</p>
               <ul className="text-gray-400 flex flex-col gap-2">
-                <li>Documentação</li>
-                <li>Integração</li>
-                <li>API Reference</li>
-                <li>Suporte</li>
-                <li>Ajuda</li>
+                <li><Link className="hover:text-blue-500" href="#">Sobre</Link></li>
+                <li><Link className="hover:text-blue-500" href="#">Preços</Link></li>
+                <li><Link className="hover:text-blue-500" href="#">Blog</Link></li>
+                <li><Link className="hover:text-blue-500" href="#">Vagas</Link></li>
+                <li><Link className="hover:text-blue-500" href="#">Contato</Link></li>
               </ul>
             </div>
             <div>
               <p className="mb-3 font-semibold">Plataforma</p>
               <ul className="text-gray-400 flex flex-col gap-2">
-                <li>Infraestrutura</li>
-                <li>Certificados</li>
-                <li>Licensas</li>
-                <li>Termos e condições</li>
-                <li>Jurídico</li>
+                <li><Link className="hover:text-blue-500" href="#">Sobre</Link></li>
+                <li><Link className="hover:text-blue-500" href="#">Preços</Link></li>
+                <li><Link className="hover:text-blue-500" href="#">Blog</Link></li>
+                <li><Link className="hover:text-blue-500" href="#">Vagas</Link></li>
+                <li><Link className="hover:text-blue-500" href="#">Contato</Link></li>
               </ul>
             </div>
-          </div>
-        </div>
 
-        <div className="flex flex-col items-center lg:items-start border-b-1 border-gray-700 pb-8 mb-8 lg:flex-row lg:justify-center lg:gap-20">
-          <div>
-            <div className="flex items-center gap-2 mb-5 text-gray-400">
-              <MapPin />
-              <p>Endereço, Rua Tal Tal Tal, 876 - Brasil</p>
-            </div>
-            <div className="flex items-center gap-2 mb-5 text-gray-400">
-              <Phone />
-              <p>00 0000 0000</p>
-            </div>
-            <div className="flex items-center gap-2 mb-8 text-gray-400">
-              <Mail />
-              <p>email@email.com</p>
-            </div>
           </div>
 
+          <div className="flex gap-20 justify-between items-center lg:items-start pb-8 mb-8 lg:justify-center">
+            <div>
+              <div className="flex items-center gap-2 mb-5 text-gray-400">
+                <MapPin />
+                <p>Endereço, Rua Tal Tal Tal, 876 - Brasil</p>
+              </div>
+              <div className="flex items-center gap-2 mb-5 text-gray-400">
+                <Phone />
+                <p>11 1234 5678</p>
+              </div>
+              <div className="flex items-center gap-2 mb-8 text-gray-400">
+                <Mail />
+                <p>emailavancce@email.com</p>
+              </div>
+            </div>
 
-          <div>
-            <p className="font-semibold">Nossas redes</p>
-            <div className="flex gap-5 mt-5 text-gray-400">
-              <Facebook className="cursor-pointer" />
-              <Twitter className="cursor-pointer" />
-              <Linkedin className="cursor-pointer" />
+            <div>
+              <p className="font-semibold">Nossas redes</p>
+              <div className="flex gap-5 mt-5 text-gray-400">
+                <Facebook className="cursor-pointer hover:text-blue-500" />
+                <Twitter className="cursor-pointer hover:text-blue-500" />
+                <Linkedin className="cursor-pointer hover:text-blue-500" />
+              </div>
             </div>
           </div>
         </div>
 
         <div className="flex flex-col gap-3 items-center text-gray-400 text-sm lg:flex-row lg:gap-0 lg:justify-between">
-          <p>©Copyright 2025 by S.</p>
+          <p>©Copyright 2025 by L.</p>
           <p>Privacidade - Cookies - Termos e Condições</p>
           <div className="flex gap-5">
             <Image src="/black-applestore.png" alt="." width={100} height={100} />
