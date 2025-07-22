@@ -4,7 +4,8 @@ export const coursesArray = [
     slug: "formacao-typescript-fullstack-developer",
     imageSrc: "/courses/courses-typescript.png",
     imageAlt: "Curso de Typescript",
-    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem iste ea incidunt optio atque ullam earum veritatis, ipsam, perferendis eius consequatur enim! Minus harum, iure voluptates rerum quisquam facere explicabo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, ipsum quo nobis ad dolor architecto voluptatum nemo. Recusandae pariatur molestias consequuntur laborum, distinctio vero reprehenderit error? 
+    description: `
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem iste ea incidunt optio atque ullam earum veritatis, ipsam, perferendis eius consequatur enim! Minus harum, iure voluptates rerum quisquam facere explicabo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, ipsum quo nobis ad dolor architecto voluptatum nemo. Recusandae pariatur molestias consequuntur laborum, distinctio vero reprehenderit error? 
     
     A fugiat voluptate officiis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, ipsum quo nobis ad dolor architecto voluptatum nemo. Recusandae pariatur molestias consequuntur laborum, distinctio vero reprehenderit error? A fugiat voluptate officiis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, ipsum quo nobis ad dolor architecto voluptatum nemo. Recusandae pariatur molestias consequuntur laborum, distinctio vero reprehenderit error? A fugiat voluptate officiis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, ipsum quo nobis ad dolor architecto voluptatum nemo. 
     

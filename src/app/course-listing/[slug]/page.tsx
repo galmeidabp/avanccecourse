@@ -39,19 +39,20 @@ export default function CourseDetails({ params }: Params) {
         <div className="grid gap-10 items-start md:grid-cols-[3fr_1fr] lg:gap-20">
           <div className="flex flex-col gap-6">
             <h2 className="font-semibold text-2xl">{course?.title}</h2>
-            <p>{course?.description}</p>
+            
+            <p className="whitespace-pre-line">{course?.description}</p>
           </div>
 
           <div className="bg-gray-800 p-5 rounded-lg shadow-xl/30">
             <h3 className="font-semibold text-lg mb-5">Compartilhar</h3>
             <div className="flex flex-col gap-3">
-              <button className="bg-indigo-600 text-white p-2 rounded flex items-center justify-center gap-2"><Facebook /> Facebook</button>
-              <button className="bg-blue-400 text-white p-2 rounded flex items-center justify-center gap-2"><Twitter /> Twitter</button>
-              <button className="bg-blue-600 text-white p-2 rounded flex items-center justify-center gap-2"><Linkedin /> LinkedIn</button>
+              <button className="bg-indigo-600 text-white p-2 rounded flex items-center justify-center gap-2 hover:bg-indigo-700"><Facebook /> Facebook</button>
+              <button className="bg-blue-400 text-white p-2 rounded flex items-center justify-center gap-2 hover:bg-blue-500"><Twitter /> Twitter</button>
+              <button className="bg-blue-600 text-white p-2 rounded flex items-center justify-center gap-2 hover:bg-blue-700"><Linkedin /> LinkedIn</button>
             </div>
             <div className="flex flex-col gap-3 mt-10">
               <h3>Assine nossa newsletter</h3>
-              <input type="email" placeholder="Email" className="border-1 border-gray-400 p-2 text-sm rounded" />
+              <input type="email" placeholder="Email" className="border-1 border-gray-400 p-2 text-sm rounded outline-none focus:bg-gray-700" />
               <Button name="Assinar" />
             </div>
           </div>

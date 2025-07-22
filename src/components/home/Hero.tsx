@@ -14,7 +14,7 @@ export function Hero() {
           <div className="flex gap-5">
             <Button name="Começar" />
 
-            <button className="flex gap-3 bg-gray-100 text-blue-500 font-semibold px-3 py-1.5 rounded lg:px-8 lg:py-2 hover:cursor-pointer">Como funciona?</button>
+            <button className="flex gap-3 bg-gray-100 text-blue-500 font-semibold px-3 py-1.5 rounded lg:px-8 lg:py-2 hover:cursor-pointer hover:bg-gray-300">Como funciona?</button>
           </div>
         </div>
         <Image src="/hero-image.png" alt="." height={300} width={400} priority className="hidden lg:block" />
