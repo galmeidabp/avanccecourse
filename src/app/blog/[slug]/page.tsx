@@ -9,13 +9,15 @@ import { BlogCard } from "@/components/blog/Blog-card";
 import Link from "next/link";
 import remarkBreaks from "remark-breaks";
 
-type BlogPageProps = {
-  params: {
-    slug: string
-  }
+export async function generateStaticParams() {
+  const posts = getAllPosts()
+
+  return posts.map((post) => ({
+    slug: post.slug,
+  }))
 }
 
-export default async function BlogPage({ params }: BlogPageProps) {
+export default async function BlogPage({ params, }: {params: {slug: string}}) {
   const posts = getAllPosts()
   const post = getPostBySlug(params.slug)
 
