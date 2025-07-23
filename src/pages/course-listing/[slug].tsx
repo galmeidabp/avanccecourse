@@ -1,16 +1,36 @@
-import { coursesArray } from "@/app/data/courses"
+import { coursesArray } from "@/data/courses"
 import { Button } from "@/components/Button"
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from "@/components/ui/breadcrumb"
 import { Facebook, Linkedin, Twitter } from "lucide-react"
+import { GetStaticPaths, GetStaticProps } from "next"
 
-interface Params {
-  params: {
-    slug: string
+export const getStaticPaths: GetStaticPaths = async () => {
+  const paths = coursesArray.map((course) => ({
+    params: { slug: course.slug }
+  }))
+
+  return {
+    paths,
+    fallback: false,
   }
 }
 
-export default function CourseDetails({ params }: Params) {
-  const course = coursesArray.find((c) => c.slug === params.slug)
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const slug = params?.slug as string
+
+  return {
+    props: {
+      slug,
+    },
+  }
+}
+
+interface CourseDetailsProps {
+  slug: string
+}
+
+export default function CourseDetails({ slug }: CourseDetailsProps) {
+  const course = coursesArray.find((c) => c.slug === slug)
 
   return (
     <div className="mb-35">
@@ -39,7 +59,7 @@ export default function CourseDetails({ params }: Params) {
         <div className="grid gap-10 items-start md:grid-cols-[3fr_1fr] lg:gap-20">
           <div className="flex flex-col gap-6">
             <h2 className="font-semibold text-2xl">{course?.title}</h2>
-            
+
             <p className="whitespace-pre-line">{course?.description}</p>
           </div>
 

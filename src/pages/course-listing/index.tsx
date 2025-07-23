@@ -1,5 +1,5 @@
+import { coursesArray } from "@/data/courses"
 import { CourseCard } from "@/components/courses/CourseCard"
-import { coursesArray } from "../data/courses"
 
 export default function CourseListing() {
   return (

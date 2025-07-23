@@ -2,9 +2,16 @@ import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
 
+interface Post {
+  slug: string;
+  title: string;
+  date: string;
+  content: string;
+}
+
 const postsDirectory = path.join(process.cwd(), 'posts')
 
-export function getAllPosts() {
+export function getAllPosts(): Post[] {
   const fileNames = fs.readdirSync(postsDirectory)
 
     return fileNames.map((fileName) => {

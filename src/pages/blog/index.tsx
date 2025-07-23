@@ -1,10 +1,30 @@
 import { BlogCard } from "@/components/blog/Blog-card"
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from "@/components/ui/breadcrumb"
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination"
-import { getAllPosts } from "../../../lib/posts"
+import { GetStaticProps } from "next";
+import { getAllPosts } from "../../../lib/posts";
 
-export default function Blog() {
-  const posts = getAllPosts()
+interface Post {
+  slug: string;
+  title: string;
+  date: string;
+  content: string;
+}
+
+interface BlogProps {
+  posts: Post[];
+}
+
+export const getStaticProps: GetStaticProps<BlogProps> = async () => {
+  const posts = getAllPosts();
+  return {
+    props: {
+      posts,
+    },
+  };
+};
+
+export default function Blog({posts}: BlogProps) {
 
   return (
     <div className="flex flex-col mt-15 mb-35 max-w-sm m-auto md:max-w-xl lg:max-w-5xl">
