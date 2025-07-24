@@ -34,8 +34,8 @@ export default function CourseDetails({ slug }: CourseDetailsProps) {
 
   return (
     <div className="mb-35">
-      <div className="bg-blue-900">
-        <div className="flex gap-10 flex-col-reverse lg:flex-row lg:justify-between my-15 max-w-sm m-auto md:max-w-xl lg:max-w-5xl py-10">
+      <div className="border-y-2 p-6 mt-20 border-sky-600">
+        <div className="flex gap-3 flex-col-reverse lg:flex-row lg:justify-between max-w-sm m-auto lg:gap-10 md:max-w-xl lg:max-w-5xl">
           <div>
             <h1 className="text-3xl font-bold my-5 lg:mt-0">{course?.title}</h1>
           </div>
@@ -48,6 +48,10 @@ export default function CourseDetails({ slug }: CourseDetailsProps) {
               <BreadcrumbItem>
                 <BreadcrumbLink className="text-white" href="/course-listing">Cursos</BreadcrumbLink>
               </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink className="text-blue-200" href={`${slug}`}>Curso</BreadcrumbLink>
+              </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
 
@@ -57,13 +61,13 @@ export default function CourseDetails({ slug }: CourseDetailsProps) {
       <div className="flex flex-col mt-15 max-w-sm m-auto md:max-w-xl lg:max-w-5xl">
 
         <div className="grid gap-10 items-start md:grid-cols-[3fr_1fr] lg:gap-20">
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-6 bg-neutral-800 rounded-lg p-8">
             <h2 className="font-semibold text-2xl">{course?.title}</h2>
 
             <p className="whitespace-pre-line">{course?.description}</p>
           </div>
 
-          <div className="bg-gray-800 p-5 rounded-lg shadow-xl/30">
+          <div className="bg-neutral-800 p-5 rounded-lg shadow-xl/30">
             <h3 className="font-semibold text-lg mb-5">Compartilhar</h3>
             <div className="flex flex-col gap-3">
               <button className="bg-indigo-600 text-white p-2 rounded flex items-center justify-center gap-2 hover:bg-indigo-700"><Facebook /> Facebook</button>
@@ -72,7 +76,7 @@ export default function CourseDetails({ slug }: CourseDetailsProps) {
             </div>
             <div className="flex flex-col gap-3 mt-10">
               <h3>Assine nossa newsletter</h3>
-              <input type="email" placeholder="Email" className="border-1 border-gray-400 p-2 text-sm rounded outline-none focus:bg-gray-700" />
+              <input type="email" placeholder="Email" className="border-1 border-gray-400 p-2 text-sm rounded transition-colors duration-300 outline-none focus:bg-neutral-700" />
               <Button name="Assinar" />
             </div>
           </div>

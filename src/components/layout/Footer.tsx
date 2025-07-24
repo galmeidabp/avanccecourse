@@ -5,7 +5,7 @@ import { Logo } from "./Logo";
 
 export function Footer() {
   return (
-    <div className="bg-gray-800 p-10">
+    <div className="bg-neutral-800 p-10">
       <div className="max-w-sm m-auto md:max-w-xl lg:max-w-5xl">
         <div className="flex flex-col items-center justify-between border-b-1 border-gray-700 pb-8 mb-8 md:flex-row">
           <Logo />
@@ -13,8 +13,8 @@ export function Footer() {
           <form className="flex flex-col gap-3 items-center md:flex-row">
             <p className="font-semibold">Assine nossa newsletter</p>
             <div className="flex items-center gap-3">
-              <input type="text" placeholder="Digite seu e-mail" className="bg-blue-500 p-2 rounded outline-none focus:bg-blue-600" />
-              <button type="submit" className="p-2 bg-blue-500 rounded cursor-pointer hover:bg-blue-600"><Send /></button>
+              <input type="text" placeholder="Digite seu e-mail" className="bg-sky-600 transition-colors duration-300 p-2 rounded outline-none focus:bg-sky-800" />
+              <button type="submit" className="p-2 bg-sky-600 rounded cursor-pointer hover:bg-sky-800"><Send /></button>
             </div>
           </form>
         </div>
@@ -24,41 +24,41 @@ export function Footer() {
             <div>
               <p className="mb-3 font-semibold">Explore</p>
               <ul className="text-gray-400 flex flex-col gap-2">
-                <li><Link className="hover:text-blue-500" href="#">Sobre</Link></li>
-                <li><Link className="hover:text-blue-500" href="#">Preços</Link></li>
-                <li><Link className="hover:text-blue-500" href="#">Blog</Link></li>
-                <li><Link className="hover:text-blue-500" href="#">Vagas</Link></li>
-                <li><Link className="hover:text-blue-500" href="#">Contato</Link></li>
+                <li><Link className="hover:text-sky-600" href="#">Sobre</Link></li>
+                <li><Link className="hover:text-sky-600" href="#">Preços</Link></li>
+                <li><Link className="hover:text-sky-600" href="#">Blog</Link></li>
+                <li><Link className="hover:text-sky-600" href="#">Vagas</Link></li>
+                <li><Link className="hover:text-sky-600" href="#">Contato</Link></li>
               </ul>
             </div>
             <div>
               <p className="mb-3 font-semibold">Recurso</p>
               <ul className="text-gray-400 flex flex-col gap-2">
-                <li><Link className="hover:text-blue-500" href="#">Sobre</Link></li>
-                <li><Link className="hover:text-blue-500" href="#">Preços</Link></li>
-                <li><Link className="hover:text-blue-500" href="#">Blog</Link></li>
-                <li><Link className="hover:text-blue-500" href="#">Vagas</Link></li>
-                <li><Link className="hover:text-blue-500" href="#">Contato</Link></li>
+                <li><Link className="hover:text-sky-600" href="#">Sobre</Link></li>
+                <li><Link className="hover:text-sky-600" href="#">Preços</Link></li>
+                <li><Link className="hover:text-sky-600" href="#">Blog</Link></li>
+                <li><Link className="hover:text-sky-600" href="#">Vagas</Link></li>
+                <li><Link className="hover:text-sky-600" href="#">Contato</Link></li>
               </ul>
             </div>
             <div>
               <p className="mb-3 font-semibold">Benefícios</p>
               <ul className="text-gray-400 flex flex-col gap-2">
-                <li><Link className="hover:text-blue-500" href="#">Sobre</Link></li>
-                <li><Link className="hover:text-blue-500" href="#">Preços</Link></li>
-                <li><Link className="hover:text-blue-500" href="#">Blog</Link></li>
-                <li><Link className="hover:text-blue-500" href="#">Vagas</Link></li>
-                <li><Link className="hover:text-blue-500" href="#">Contato</Link></li>
+                <li><Link className="hover:text-sky-600" href="#">Sobre</Link></li>
+                <li><Link className="hover:text-sky-600" href="#">Preços</Link></li>
+                <li><Link className="hover:text-sky-600" href="#">Blog</Link></li>
+                <li><Link className="hover:text-sky-600" href="#">Vagas</Link></li>
+                <li><Link className="hover:text-sky-600" href="#">Contato</Link></li>
               </ul>
             </div>
             <div>
               <p className="mb-3 font-semibold">Plataforma</p>
               <ul className="text-gray-400 flex flex-col gap-2">
-                <li><Link className="hover:text-blue-500" href="#">Sobre</Link></li>
-                <li><Link className="hover:text-blue-500" href="#">Preços</Link></li>
-                <li><Link className="hover:text-blue-500" href="#">Blog</Link></li>
-                <li><Link className="hover:text-blue-500" href="#">Vagas</Link></li>
-                <li><Link className="hover:text-blue-500" href="#">Contato</Link></li>
+                <li><Link className="hover:text-sky-600" href="#">Sobre</Link></li>
+                <li><Link className="hover:text-sky-600" href="#">Preços</Link></li>
+                <li><Link className="hover:text-sky-600" href="#">Blog</Link></li>
+                <li><Link className="hover:text-sky-600" href="#">Vagas</Link></li>
+                <li><Link className="hover:text-sky-600" href="#">Contato</Link></li>
               </ul>
             </div>
 
@@ -83,9 +83,9 @@ export function Footer() {
             <div>
               <p className="font-semibold">Nossas redes</p>
               <div className="flex gap-5 mt-5 text-gray-400">
-                <Facebook className="cursor-pointer hover:text-blue-500" />
-                <Twitter className="cursor-pointer hover:text-blue-500" />
-                <Linkedin className="cursor-pointer hover:text-blue-500" />
+                <Facebook className="cursor-pointer hover:text-sky-600" />
+                <Twitter className="cursor-pointer hover:text-sky-600" />
+                <Linkedin className="cursor-pointer hover:text-sky-600" />
               </div>
             </div>
           </div>

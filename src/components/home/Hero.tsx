@@ -6,22 +6,22 @@ import { Button } from "../Button";
 export function Hero() {
   return (
     <>
-      < div className="flex gap-10 mt-25 max-w-sm m-auto md:max-w-xl lg:max-w-5xl" >
+      < div className="flex gap-10 items-center my-40 max-w-sm m-auto md:max-w-xl lg:max-w-5xl" >
 
         <div className="max-w-2xl flex flex-col gap-8">
-          <h1 className="text-5xl font-bold md:text-5xl">Aprender é a chave para o seu sucesso. Obtenha cursos personalizados.</h1>
+          <h1 className="text-5xl font-bold md:text-5xl">Aprender é a chave para o seu <span className="text-cyan-300">sucesso</span>.</h1>
           <p className="text-gray-400 md:text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem nihil odit totam, numquam accusamus incidunt eius corporis veniam expedita </p>
           <div className="flex gap-5">
             <Button name="Começar" />
 
-            <button className="flex gap-3 bg-gray-100 text-blue-500 font-semibold px-3 py-1.5 rounded lg:px-8 lg:py-2 hover:cursor-pointer hover:bg-gray-300">Como funciona?</button>
+            <button className="flex gap-3 bg-gray-100 text-sky-600 transition-colors duration-300 font-semibold px-3 py-1.5 rounded lg:px-8 lg:py-2 hover:cursor-pointer hover:bg-gray-300">Como funciona?</button>
           </div>
         </div>
         <Image src="/hero-image.png" alt="." height={300} width={400} priority className="hidden lg:block" />
 
       </div >
 
-      < div className="max-w-sm m-auto md:max-w-xl lg:max-w-5xl" >
+      < div className="max-w-sm m-auto mb-25 md:max-w-xl lg:max-w-5xl" >
         <h2 className="text-3xl font-bold mt-25">Explore por <br /> categorias</h2>
         <div className="grid grid-cols-2 mt-5 md:grid-cols-3 lg:grid-cols-5 lg:gap-5 md:mt-10">
           <Categories title="Segurança avançada" Icon={LockKeyholeOpen} iconColor="text-amber-400" bgColor="bg-amber-200" />
