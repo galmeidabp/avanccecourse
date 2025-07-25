@@ -33,7 +33,7 @@ export default function CourseDetails({ slug }: CourseDetailsProps) {
   const course = coursesArray.find((c) => c.slug === slug)
 
   return (
-    <div className="mb-35">
+    <div className="mb-35 ">
       <div className="p-6 mt-20">
         <div className="flex gap-3 flex-col-reverse lg:flex-row lg:justify-between max-w-sm m-auto lg:gap-10 md:max-w-xl lg:max-w-5xl">
           <div>

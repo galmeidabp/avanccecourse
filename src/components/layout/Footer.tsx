@@ -95,8 +95,8 @@ export function Footer() {
           <p>©Copyright 2025 by L.</p>
           <p>Privacidade - Cookies - Termos e Condições</p>
           <div className="flex gap-5">
-            <Image src="/black-applestore.png" alt="." width={100} height={100} />
-            <Image src="/black-googleplay.png" alt="." width={100} height={100} />
+            <Image src="/black-applestore.png" alt="Apple Store" width={100} height={100} />
+            <Image src="/black-googleplay.png" alt="Google Play" width={100} height={100} />
           </div>
         </div>
       </div>

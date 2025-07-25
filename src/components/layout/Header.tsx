@@ -14,7 +14,7 @@ export function Header() {
         <li className="hover:cursor-pointer hover:text-sky-600"><Link href="/contact">Contato</Link></li>
       </ul>
 
-      <Button name="Saber Mais" />
+      <Button name="Saber Mais" size="sm" />
     </div>
   )
 }

@@ -56,7 +56,7 @@ export default function BlogPage({ post, contentHtml, posts }: BlogPageProps) {
 
   return (
     <div>
-      <div className="flex flex-col mt-15 max-w-sm m-auto md:max-w-xl lg:max-w-5xl">
+      <div className="flex flex-col mt-25 max-w-sm m-auto md:max-w-xl lg:max-w-5xl">
 
         <div className="flex flex-col gap-2 mb-5 lg:flex-row lg:justify-between lg:items-center">
           <div className="flex flex-row gap-8 text-gray-400">
@@ -66,7 +66,7 @@ export default function BlogPage({ post, contentHtml, posts }: BlogPageProps) {
 
 
           <div className="flex gap-5 lg:flex-row">
-            <Image src="/author.png" alt="." width={50} height={60} />
+            <Image src="/author.png" alt="Imagem do autor" width={50} height={60} />
             <div className="flex flex-col">
               <p className="font-semibold">Andrea Martins</p>
               <span className="text-gray-400">Autor</span>
@@ -74,7 +74,7 @@ export default function BlogPage({ post, contentHtml, posts }: BlogPageProps) {
           </div>
         </div>
 
-        <Image src="/post-img.png" alt="Blog Header" width={700} height={500} className="rounded-lg mt-5 mb-5 " />
+        <Image src="/post-img.png" alt="Imagem do blog" width={700} height={500} className="rounded-lg mt-5 mb-5 " />
 
         <div className="grid gap-20 mt-10 items-start lg:grid-cols-[3fr_1fr]">
           <div className="flex flex-col gap-6">

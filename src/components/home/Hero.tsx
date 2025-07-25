@@ -6,8 +6,6 @@ import { Button } from "../Button";
 export function Hero() {
   return (
     <>
-      
-      
       < div className="flex gap-10 items-center my-40 max-w-sm m-auto md:max-w-xl lg:max-w-5xl" >
 
         <div className="max-w-2xl flex flex-col gap-8">
@@ -19,11 +17,11 @@ export function Hero() {
             <button className="flex gap-3 bg-gray-100 text-sky-600 duration-300 font-semibold px-3 py-1.5 rounded lg:px-8 lg:py-2 hover:cursor-pointer transition-all ease-in-out hover:ring-2 hover:ring-sky-300 hover:ring-offset-2 hover:ring-offset-neutral-900 hover:bg-transparent">Como funciona?</button>
           </div>
         </div>
-        <Image src="/hero-img.png" alt="." height={300} width={400} priority className="hidden lg:block rounded-full transition-all duration-300 ease-in-out hover:scale-105 hover:ring-2 hover:ring-sky-300 hover:ring-offset-2 hover:ring-offset-black" />
+        <Image src="/hero-img.png" alt="Duas pessoas com um computador" height={300} width={400} priority className="hidden lg:block rounded-full transition-all duration-300 ease-in-out hover:scale-105 hover:ring-2 hover:ring-sky-300 hover:ring-offset-2 hover:ring-offset-black" />
 
       </div >
 
-      < div className="max-w-sm m-auto mb-25 md:max-w-xl lg:max-w-5xl" >
+      < div className="max-w-sm m-auto mb-8 md:max-w-xl lg:max-w-5xl" >
         <h2 className="text-3xl font-bold mt-25">Explore por <br /> categorias</h2>
         <div className="grid grid-cols-2 mt-5 md:grid-cols-3 lg:grid-cols-5 lg:gap-5 md:mt-10">
           <Categories title="Segurança avançada" Icon={LockKeyholeOpen} iconColor="text-amber-400" bgColor="bg-amber-200" />

@@ -37,7 +37,7 @@ export function CourseCard({imageSrc, imageAlt, title, slug}: CourseCardProps) {
 
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <Image src="/course-professor.png" alt="." height={40} width={40} />
+              <Image src="/course-professor.png" alt="Professor do curso" height={40} width={40} />
               <p className="font-semibold">Daniela Soares</p>
             </div>
             <span className="text-sky-600">R$ 114,99</span>
