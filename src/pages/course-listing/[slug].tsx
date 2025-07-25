@@ -34,7 +34,7 @@ export default function CourseDetails({ slug }: CourseDetailsProps) {
 
   return (
     <div className="mb-35">
-      <div className="border-y-2 p-6 mt-20 border-sky-600">
+      <div className="p-6 mt-20">
         <div className="flex gap-3 flex-col-reverse lg:flex-row lg:justify-between max-w-sm m-auto lg:gap-10 md:max-w-xl lg:max-w-5xl">
           <div>
             <h1 className="text-3xl font-bold my-5 lg:mt-0">{course?.title}</h1>

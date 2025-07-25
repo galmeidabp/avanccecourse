@@ -25,7 +25,7 @@ interface BlogPageProps {
 export const getStaticPaths: GetStaticPaths = async () => {
   const posts = getAllPosts()
   const paths = posts.map(post => ({
-    params: {slug: post.slug},
+    params: { slug: post.slug },
   }))
 
   return {
@@ -34,7 +34,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }
 }
 
-export const getStaticProps: GetStaticProps = async ({params}) => {
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = params?.slug as string
   const post = getPostBySlug(slug)
 
@@ -45,27 +45,25 @@ export const getStaticProps: GetStaticProps = async ({params}) => {
 
   return {
     props: {
-      post, 
+      post,
       contentHtml,
       posts,
     },
   }
 }
 
-export default function BlogPage({post, contentHtml, posts}: BlogPageProps) {
+export default function BlogPage({ post, contentHtml, posts }: BlogPageProps) {
 
   return (
     <div>
       <div className="flex flex-col mt-15 max-w-sm m-auto md:max-w-xl lg:max-w-5xl">
 
-        <div className="flex flex-col gap-2 mb-10 lg:flex-row lg:justify-between lg:items-center">
-          <div className="flex flex-col gap-3 mb-3">
-            <div className="flex flex-row gap-8 text-gray-400">
-              <span>Trends</span>
-              <span>{post.date}</span>
-            </div>
-            <h1 className="text-3xl font-bold">{post.title}</h1>
+        <div className="flex flex-col gap-2 mb-5 lg:flex-row lg:justify-between lg:items-center">
+          <div className="flex flex-row gap-8 text-gray-400">
+            <span>Trends</span>
+            <span>{post.date}</span>
           </div>
+
 
           <div className="flex gap-5 lg:flex-row">
             <Image src="/author.png" alt="." width={50} height={60} />
@@ -76,10 +74,11 @@ export default function BlogPage({post, contentHtml, posts}: BlogPageProps) {
           </div>
         </div>
 
-        <Image src="/post-img.png" alt="Blog Header" width={700} height={500} className="rounded-lg mt-5 mb-5 m-auto" />
+        <Image src="/post-img.png" alt="Blog Header" width={700} height={500} className="rounded-lg mt-5 mb-5 " />
 
         <div className="grid gap-20 mt-10 items-start lg:grid-cols-[3fr_1fr]">
           <div className="flex flex-col gap-6">
+            <h1 className="text-3xl font-bold">{post.title}</h1>
             <div style={{ whiteSpace: "pre-wrap", lineHeight: "1.6", fontSize: "1rem" }}
               dangerouslySetInnerHTML={{ __html: contentHtml }}></div>
 
@@ -93,7 +92,7 @@ export default function BlogPage({post, contentHtml, posts}: BlogPageProps) {
             </div>
           </div>
 
-          <div className="bg-gray-800 p-5 rounded-lg shadow-xl/30 max-w-sm">
+          <div className="bg-neutral-800 p-5 rounded-lg shadow-xl/30 max-w-sm">
             <h3 className="font-semibold text-lg mb-5">Compartilhar</h3>
             <div className="flex flex-col gap-3">
               <button className="bg-indigo-600 text-white p-2 rounded flex items-center justify-center gap-2 hover:bg-indigo-700"><Facebook /> Facebook</button>
@@ -109,11 +108,11 @@ export default function BlogPage({post, contentHtml, posts}: BlogPageProps) {
         </div>
       </div>
 
-      <div className="bg-blue-900">
+      <div className="">
         <div className="flex flex-col mt-15 max-w-sm m-auto md:max-w-xl lg:max-w-5xl py-10">
           <div className="flex justify-between">
             <h3 className="font-semibold text-lg mb-5">Últimos posts e novidades</h3>
-            <Link href="/blog" className="flex items-center gap-1 text-sm hover:underline">Ver mais <ChevronRight /></ Link>
+            <Link href="/blog" className="text-sky-600 flex items-center gap-1 text-sm hover:underline">Ver mais <ChevronRight /></ Link>
           </div>
 
           <div className="grid grid-cols-1 gap-x-5 gap-y-15 lg:grid-cols-2 mb-15">
