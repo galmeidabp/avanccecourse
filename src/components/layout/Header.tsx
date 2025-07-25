@@ -9,7 +9,7 @@ export function Header() {
 
       <ul className="flex gap-3 text-gray-400 md:gap-8 lg:gap-10">
         <li className="hover:cursor-pointer hover:text-sky-600"><Link href="/">Home</Link></li>
-        <li className="hover:cursor-pointer hover:text-sky-600"><Link prefetch={false} href="/course-listing">Cursos</Link></li>
+        <li className="hover:cursor-pointer hover:text-sky-600"><Link prefetch={false} href="/courses">Cursos</Link></li>
         <li className="hover:cursor-pointer hover:text-sky-600"><Link prefetch={false} href="/blog">Blog</Link></li>
         <li className="hover:cursor-pointer hover:text-sky-600"><Link href="/contact">Contato</Link></li>
       </ul>

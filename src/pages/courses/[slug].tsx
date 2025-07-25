@@ -46,7 +46,7 @@ export default function CourseDetails({ slug }: CourseDetailsProps) {
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbLink className="text-white" href="/course-listing">Cursos</BreadcrumbLink>
+                <BreadcrumbLink className="text-white" href="/courses">Cursos</BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
