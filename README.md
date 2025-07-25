@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧠 Avancce Course — Site-Blog em Next.js
 
-## Getting Started
+Este projeto é um site e blog criado com **Next.js (Pages Router)**, onde os posts são escritos em **Markdown** e renderizados usando **Static Site Generation (SSG)**.  
+Foi desenvolvido como forma de praticar conceitos essenciais de geração estática, roteamento dinâmico, estilização com Tailwind CSS e organização de conteúdo dinâmico sem uso de back-end.
 
-First, run the development server:
+🔗 **Acesse o projeto em produção:**  
+👉 [https://avanccecourse.vercel.app/](https://avanccecourse.vercel.app/)
+
+---
+
+## ✨ Funcionalidades
+
+- ✅ Listagem de posts escritos em arquivos `.md`
+- ✅ Página individual para cada post e curso, com slug dinâmico
+- ✅ Renderização de conteúdo com Markdown
+- ✅ SEO otimizado com SSG
+- ✅ Estilização responsiva com Tailwind CSS
+
+---
+
+## ⚙️ Tecnologias utilizadas
+
+- **Next.js (Pages Router)** — estruturação da aplicação e rotas dinâmicas
+- **TypeScript** — tipagem estática para maior segurança no desenvolvimento
+- **Tailwind CSS** — framework utilitário para estilização responsiva
+- **Gray-Matter** — parser de metadados (frontmatter) dos arquivos Markdown
+- **remark + rehype** — conversão do Markdown para HTML
+- **fs + path (Node.js)** — leitura dos arquivos do sistema local no momento do build
+
+---
+
+
+## 🚀 Como rodar localmente
 
 ```bash
+git clone https://github.com/galmeidabp/avanccecourse.git
+cd avanccecourse
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
