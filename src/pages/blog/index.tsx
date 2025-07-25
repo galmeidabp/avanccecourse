@@ -27,7 +27,7 @@ export const getStaticProps: GetStaticProps<BlogProps> = async () => {
 export default function Blog({posts}: BlogProps) {
 
   return (
-    <div className="flex flex-col mt-15 mb-35 max-w-sm m-auto md:max-w-xl lg:max-w-5xl">
+    <div className="flex flex-col mt-30 mb-25 max-w-sm m-auto md:max-w-xl lg:max-w-5xl">
       <div className="flex flex-row justify-between items-center mb-15">
         <h1 className="text-3xl font-bold">Blog</h1>
         <Breadcrumb>
@@ -43,7 +43,7 @@ export default function Blog({posts}: BlogProps) {
         </Breadcrumb>
       </div>
 
-      <div className="grid grid-cols-1 gap-x-5 gap-y-15 lg:grid-cols-2 mb-15">
+      <div className="grid grid-cols-1 gap-5  lg:grid-cols-2 mb-15">
 
         {posts.map((post) => (
           <BlogCard key={post.slug} title={post.title} date={post.date} slug={post.slug} />

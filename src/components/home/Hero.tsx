@@ -6,6 +6,8 @@ import { Button } from "../Button";
 export function Hero() {
   return (
     <>
+      
+      
       < div className="flex gap-10 items-center my-40 max-w-sm m-auto md:max-w-xl lg:max-w-5xl" >
 
         <div className="max-w-2xl flex flex-col gap-8">
@@ -14,10 +16,10 @@ export function Hero() {
           <div className="flex gap-5">
             <Button name="Começar" />
 
-            <button className="flex gap-3 bg-gray-100 text-sky-600 transition-colors duration-300 font-semibold px-3 py-1.5 rounded lg:px-8 lg:py-2 hover:cursor-pointer hover:bg-gray-300">Como funciona?</button>
+            <button className="flex gap-3 bg-gray-100 text-sky-600 duration-300 font-semibold px-3 py-1.5 rounded lg:px-8 lg:py-2 hover:cursor-pointer transition-all ease-in-out hover:ring-2 hover:ring-sky-300 hover:ring-offset-2 hover:ring-offset-neutral-900 hover:bg-transparent">Como funciona?</button>
           </div>
         </div>
-        <Image src="/hero-img.png" alt="." height={300} width={400} priority className="hidden lg:block" />
+        <Image src="/hero-img.png" alt="." height={300} width={400} priority className="hidden lg:block rounded-full transition-all duration-300 ease-in-out hover:scale-105 hover:ring-2 hover:ring-sky-300 hover:ring-offset-2 hover:ring-offset-black" />
 
       </div >
 
