@@ -8,7 +8,7 @@ type CourseListProps = {
 
 export default function CourseList({showBreadcrumb = false}: CourseListProps) {
   return (
-      <div className="max-w-xs mt-10 py-20 h-full m-auto md:max-w-xl  lg:max-w-5xl">
+      <div data-aos="fade-down" className="max-w-xs mt-10 py-20 h-full m-auto md:max-w-xl  lg:max-w-5xl">
 
         <div className="flex flex-row justify-between items-center mb-15">
           <h1 className="text-3xl font-bold">Cursos em destaque <br /> para você</h1>

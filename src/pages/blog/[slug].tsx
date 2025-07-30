@@ -55,7 +55,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 export default function BlogPage({ post, contentHtml, posts }: BlogPageProps) {
 
   return (
-    <div>
+    <div data-aos="fade-down" className="px-4">
       <div className="flex flex-col mt-25 max-w-sm m-auto md:max-w-xl lg:max-w-5xl">
 
         <div className="flex flex-col gap-2 mb-5 lg:flex-row lg:justify-between lg:items-center">

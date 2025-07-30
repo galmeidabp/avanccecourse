@@ -33,11 +33,11 @@ export default function CourseDetails({ slug }: CourseDetailsProps) {
   const course = coursesArray.find((c) => c.slug === slug)
 
   return (
-    <div className="mb-35 ">
-      <div className="p-6 mt-20">
+    <div data-aos="fade-down" className="mb-35 px-4">
+      <div className="py-6 mt-25">
         <div className="flex gap-3 flex-col-reverse lg:flex-row lg:justify-between max-w-sm m-auto lg:gap-10 md:max-w-xl lg:max-w-5xl">
           <div>
-            <h1 className="text-3xl font-bold my-5 lg:mt-0">{course?.title}</h1>
+            <h1 className="text-3xl font-bold lg:mt-0">{course?.title}</h1>
           </div>
           <Breadcrumb>
             <BreadcrumbList>
@@ -58,7 +58,7 @@ export default function CourseDetails({ slug }: CourseDetailsProps) {
         </div>
       </div>
 
-      <div className="flex flex-col mt-15 max-w-sm m-auto md:max-w-xl lg:max-w-5xl">
+      <div className="flex flex-col mt-10 max-w-sm m-auto md:max-w-xl lg:max-w-5xl">
 
         <div className="grid gap-10 items-start md:grid-cols-[3fr_1fr] lg:gap-20">
           <div className="flex flex-col gap-6 bg-neutral-800 rounded-lg p-8">

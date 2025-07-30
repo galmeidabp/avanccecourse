@@ -1,22 +1,17 @@
-import { LucideIcon } from "lucide-react";
+import { Droplet, Heart, LockKeyholeOpen, RotateCw, Scan } from "lucide-react";
+import { CategoriesCard } from "./CategorieCard";
 
-type CategoriesProps = {
-  title: string;
-  Icon: LucideIcon;
-  iconColor: string;
-  bgColor: string;
-  cardBg?: string;
-  textCard?: string;
-}
-
-export function Categories({title, Icon, iconColor, bgColor, cardBg, textCard}: CategoriesProps) { 
+export function Categories() {
   return (
-    <div className={`rounded-lg px-5 py-8 max-w-3xs flex flex-col ${cardBg} ${textCard}`}>
-      <div className={`${bgColor} rounded-lg flex items-center justify-center w-10 h-10`}>
-        <Icon className={iconColor} />
+    < div data-aos="fade-down" className="max-w-sm m-auto mb-8 md:max-w-xl lg:max-w-5xl" >
+      <h2 className="text-3xl font-bold mt-25">Explore por <br /> categorias</h2>
+      <div className="grid grid-cols-1 mt-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 lg:gap-5 md:mt-10">
+        <CategoriesCard title="Segurança avançada" Icon={LockKeyholeOpen} iconColor="text-amber-400" bgColor="bg-amber-200" />
+        <CategoriesCard title={`Boa\nsemântica`} Icon={Scan} iconColor="text-red-400" bgColor="bg-red-200" />
+        <CategoriesCard title="Componentes separados" Icon={Droplet} iconColor="text-cyan-400" bgColor="bg-cyan-200" cardBg="bg-gray-100" textCard="text-gray-900" />
+        <CategoriesCard title="Carregamento rápido" Icon={RotateCw} iconColor="text-orange-400" bgColor="bg-orange-200" />
+        <CategoriesCard title="Amado por milhares" Icon={Heart} iconColor="text-indigo-400" bgColor="bg-indigo-200" />
       </div>
-      <p className="mt-5 font-bold text-xl whitespace-pre-line">{title}</p>
-      <span className="text-sm mt-2 text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
-    </div>
+    </div >
   )
 }

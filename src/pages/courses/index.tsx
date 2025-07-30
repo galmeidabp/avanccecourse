@@ -2,6 +2,8 @@ import CourseList from "@/components/courses/Course-list";
 
 export default function Courses() {
   return (
-    <CourseList showBreadcrumb />
+    <div className="px-4">
+      <CourseList showBreadcrumb />
+    </div>
   )
 }
