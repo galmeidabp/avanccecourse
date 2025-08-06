@@ -34,19 +34,19 @@ export function Footer() {
             <div>
               <p className="mb-3 font-semibold">Recurso</p>
               <ul className="text-gray-400 flex flex-col gap-2">
-                <li><Link className="hover:text-sky-600" href="#">Sobre</Link></li>
-                <li><Link className="hover:text-sky-600" href="#">Preços</Link></li>
-                <li><Link className="hover:text-sky-600" href="#">Blog</Link></li>
-                <li><Link className="hover:text-sky-600" href="#">Vagas</Link></li>
-                <li><Link className="hover:text-sky-600" href="#">Contato</Link></li>
+                <li><Link className="hover:text-sky-600" href="#">Aulas online</Link></li>
+                <li><Link className="hover:text-sky-600" href="#">Certificados</Link></li>
+                <li><Link className="hover:text-sky-600" href="#">Suporte</Link></li>
+                <li><Link className="hover:text-sky-600" href="#">Material</Link></li>
+                <li><Link className="hover:text-sky-600" href="#">Fórum</Link></li>
               </ul>
             </div>
             <div>
               <p className="mb-3 font-semibold">Benefícios</p>
               <ul className="text-gray-400 flex flex-col gap-2">
-                <li><Link className="hover:text-sky-600" href="#">Sobre</Link></li>
-                <li><Link className="hover:text-sky-600" href="#">Preços</Link></li>
-                <li><Link className="hover:text-sky-600" href="#">Blog</Link></li>
+                <li><Link className="hover:text-sky-600" href="#">Monitoria</Link></li>
+                <li><Link className="hover:text-sky-600" href="#">Atualização</Link></li>
+                <li><Link className="hover:text-sky-600" href="#">Garantia</Link></li>
                 <li><Link className="hover:text-sky-600" href="#">Vagas</Link></li>
                 <li><Link className="hover:text-sky-600" href="#">Contato</Link></li>
               </ul>
@@ -54,11 +54,11 @@ export function Footer() {
             <div>
               <p className="mb-3 font-semibold">Plataforma</p>
               <ul className="text-gray-400 flex flex-col gap-2">
-                <li><Link className="hover:text-sky-600" href="#">Sobre</Link></li>
-                <li><Link className="hover:text-sky-600" href="#">Preços</Link></li>
-                <li><Link className="hover:text-sky-600" href="#">Blog</Link></li>
-                <li><Link className="hover:text-sky-600" href="#">Vagas</Link></li>
-                <li><Link className="hover:text-sky-600" href="#">Contato</Link></li>
+                <li><Link className="hover:text-sky-600" href="#">Cursos</Link></li>
+                <li><Link className="hover:text-sky-600" href="#">Zoom</Link></li>
+                <li><Link className="hover:text-sky-600" href="#">Área do aluno</Link></li>
+                <li><Link className="hover:text-sky-600" href="#">Termos de uso</Link></li>
+                <li><Link className="hover:text-sky-600" href="#">Política de privacidade</Link></li>
               </ul>
             </div>
 
@@ -71,7 +71,7 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-5 text-gray-400">
               <MapPin />
-              <p>Endereço, Rua Tal Tal Tal, 876 - Brasil</p>
+              <p>Rua das Dores, 733 - PE, Brasil</p>
             </div>
             <div className="flex items-center gap-2 mb-5 text-gray-400">
               <Phone />
